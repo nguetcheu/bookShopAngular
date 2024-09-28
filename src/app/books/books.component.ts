@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../Book';
+import { Book } from '../interface/Book';
 
 @Component({
   selector: 'app-books',
