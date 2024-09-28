@@ -42,7 +42,7 @@ export class BooksComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addBook(newBook: Book) {
+  addToCard(newBook: Book) {
     this.card.push(newBook);
     console.log(this.card);
   }
