@@ -20,7 +20,7 @@ export class BooksComponent implements OnInit {
     this.books = this.bookService.getBook();
   }
 
-  addToCard(newBook: Book) {
+  addToCart(newBook: Book) {
     console.log(newBook);
   }
 }

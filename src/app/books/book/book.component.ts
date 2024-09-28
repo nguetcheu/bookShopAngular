@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Book } from '../interface/Book';
+import { Book } from '../../interface/Book';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-book',
@@ -11,13 +12,14 @@ export class BookComponent implements OnInit {
   @Input() book: Book = {} as Book;
 
   /* envoyer un evenement book depuis l'enfant vers le parent  */
-  @Output() emitBook = new EventEmitter<Book>();
+ //  @Output() emitBook = new EventEmitter<Book>();
 
-  constructor() {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {}
 
   addToCart() {
-    this.emitBook.emit(this.book);
+    this.cartService.add(this.book);
+    // this.emitBook.emit(this.book);
   }
 }
