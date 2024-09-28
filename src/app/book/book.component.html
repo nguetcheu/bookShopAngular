@@ -3,4 +3,4 @@
   <p class="title">{{ book.name | titlecase }} by {{ book.author }}</p>
   <p class="currency">{{ book.amount | currency : "USD" }}</p>
 </li>
-<button>Add To card</button>
+<button (click)="addToCart(book)">Add To card</button>

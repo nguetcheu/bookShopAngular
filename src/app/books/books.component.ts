@@ -34,9 +34,16 @@ export class BooksComponent implements OnInit {
     },
   ];
 
+  card: Book[] = [];
+
   isShowing: boolean = true;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  addBook(newBook: Book) {
+    this.card.push(newBook);
+    console.log(this.card);
+  }
 }
