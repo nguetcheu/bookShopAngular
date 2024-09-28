@@ -9,8 +9,12 @@ export class CartService {
 
   constructor() {}
 
-  add(book: Book) {
+  addBook(book: Book) {
     this.cart.push(book);
     console.log(book);
+  }
+
+  getCart(): Book[] {
+    return this.cart;
   }
 }
